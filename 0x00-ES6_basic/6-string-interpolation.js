@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 export default function getSanFranciscoDescription () {
   const year = 2017;
   const budget = {
