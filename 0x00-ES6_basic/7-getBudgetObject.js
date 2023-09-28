@@ -6,5 +6,5 @@ export default function getBudgetObject(income, gdp, capita) {
       capita: capita,
     };
   
-    return {budget};
+    return Object.keys(budget);
   }
