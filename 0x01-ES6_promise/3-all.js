@@ -1,6 +1,7 @@
-import { uploadPhoto,createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
+
 export default function handleProfileSign() {
-  return Promise.all([uploadPhoto(),createUser()])
+  return Promise.all([uploadPhoto(), createUser()])
     .then(([photoRes, userRes]) => {
       console.log(`${photoRes.body} ${userRes.firstName} ${userRes.lastName}`);
     })
