@@ -6,3 +6,4 @@ export default function handleProfileSign() {
     })
     .catch(() => console.log('Signup system offline'));
 }
+\
