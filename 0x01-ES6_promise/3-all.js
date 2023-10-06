@@ -1,4 +1,4 @@
-import { uploadPhoto,createUser } from './2-then.js';
+import { uploadPhoto,createUser } from './utils.js';
 export default function handleProfileSign() {
   return new Promise ((resolve,reject) => {
     if (promise){
