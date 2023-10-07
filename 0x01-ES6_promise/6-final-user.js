@@ -8,7 +8,6 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     ({
       status: value.status,
       value: value.status === 'fulfilled' ? value.value : `Error: ${value.reason.message}`,
-    }),)
-
+    }))
   );
 }
