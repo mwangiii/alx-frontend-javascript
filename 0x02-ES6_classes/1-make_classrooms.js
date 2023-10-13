@@ -1,8 +1,8 @@
-import {ClassRoom} from './0-classroom'
+import {ClassRoom} from './0-classroom';
 
 export default function initializeRooms (){
   const roomSize = [19, 20, 34];
-  const classRooms = [];
+  const classrooms = [];
 
   for (const size of roomSizes) {
     classrooms.push(new ClassRoom(size));
