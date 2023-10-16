@@ -1,6 +1,6 @@
 export default class Building {
   constructor(sqft) {
-    if(sqft !== 'number') {
+    if(typeof sqft !== 'number') {
       throw TypeError('sqft should be a number');
     }
     this._sqft = sqft;
