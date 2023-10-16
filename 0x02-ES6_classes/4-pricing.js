@@ -1,38 +1,32 @@
-import {Currency} from './3-currency'
+import Currency from './3-currency';
 
 export default class Pricing {
-  constructor (ammount, currency){
-    if (!Number.isInteger(ammount)){
-      throw TypeError ('ammount must be a number');
-    }
-    if (!Intl.NumberFormat(currency)){
-      throw TypeError('currency should be in currecy format')
-    }
+  constructor (ammount, currency) {
     this._ammount = ammount;
-    this._currency = currency
-  }
-  get ammount() {
-    return this._ammount 
-  }
-  set ammount(newAmmount){
-    this._ammount = newAmmount
-  }
-  get currency() {
-    return this._currency
-  }
-  set currency(newCurrency){
-    this._currency = this.currency
+    this._currency = currency;
   }
 
-  displayFullPrice() {
-    return `${amount} ${currency_name} ${(currency_code)}`
+  get ammount () {
+    return this._ammount;
   }
-  static convertPrice(ammount, conversionRate){
-    if(typeof ammount !== 'number' && typeof conversionRate !== 'number'){
-      throw TypeError ('This has to be an error')
-    }
-    else{
-      return ammount * conversionRate
-    }
+
+  set ammount (newAmmount) {
+    this._ammount = newAmmount;
+  }
+
+  get currency () {
+    return this._currency;
+  }
+
+  set currency (newCurrency) {
+    this._currency = this.currency;
+  }
+
+  displayFullPrice () {
+    return `${this._amount} ${this._currency.displayFullCurrency()}`;
+  }
+
+  static convertPrice (ammount, conversionRate) {
+    return ammount * conversionRate;
   }
 }
